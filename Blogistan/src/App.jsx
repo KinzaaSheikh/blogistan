@@ -4,7 +4,7 @@ import './App.css'
 import authService from './appwrite/auth.js'
 import { login, logout } from './store/authSlice.js'
 import { Header, Footer } from './components'
-import { Outlet }  from 'react-router-dom'
+import { BrowserRouter, Outlet }  from 'react-router-dom'
 
 function App() {
 
@@ -24,15 +24,15 @@ function App() {
   }, [])
 
   return !loading ? (
-    <div>
-      <div className='w-full block'>
+    <BrowserRouter>
+      <div className='w-full'>
         <Header />
         <main>
           TODO: <Outlet />
         </main>
         <Footer />
       </div>
-    </div>
+    </BrowserRouter>
   ) : null
 }
 
