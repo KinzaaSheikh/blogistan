@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 function Header() {
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
+  
   const navItems = [
     {
       name: 'Home',
@@ -36,7 +37,7 @@ function Header() {
   ]
 
   return (
-    <header className='py-3 shadow '>
+    <header className='py-3 shadow'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
@@ -50,7 +51,7 @@ function Header() {
                 <li key={item.name}>
                   <button
                   onClick={() => navigate(item.slug)}
-                  className='inline-block px-6 py-2 duration-200'
+                  className='inline-block px-6 py-2 duration-200 text-gray-300 hover:text-blue-300' 
                   >
                     {item.name}
                   </button>

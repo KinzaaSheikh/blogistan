@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  background-color:  #27425d;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color:  #3b3e47;
+  color: #ededed;
 }
 
 footer {
-  background-color: #0E1f2f;
+  background-color: #212832;
 }
 
 
